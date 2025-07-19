@@ -1,0 +1,164 @@
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, black, blue);
+    display: flex;
+    margin: auto;
+
+
+}
+
+.main {
+    user-select: none;
+    border: 2px rgb(243, 234, 234) solid;
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 700px;
+    margin: 30px auto;
+    border-radius: 20px;
+    background: linear-gradient(to left, rgba(10, 212, 227, 0.647), rgba(255, 166, 0, 0.982));
+border: none;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 0;
+    color: azure;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.activity {
+    gap: 20px;
+}
+
+input {
+    width: 320px;
+    padding: 14px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    margin-right: 10px;
+    font-size: large;
+}
+
+input:hover {
+    background-color: black;
+    color: aliceblue;
+}
+
+button {
+    margin-left: 30px;
+    margin-right: 10px;
+    font-size: larger;
+    font-weight: bold;
+    padding: 13px;
+    width: 100px;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: aliceblue;
+    justify-items: right;
+    
+
+}
+
+button:hover {
+    background-color: black;
+    color: aliceblue;
+}
+
+.delete {
+        text-decoration: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.delete:hover {
+    background-color: rgb(1, 18, 9);
+}
+
+.list-container {
+        text-align: left;
+    justify-content: space-between;
+    color: blanchedalmond;
+    font-size: 30px;
+
+}
+
+.list-container li {
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border-radius: 8px;
+      padding: 10px 15px 10px 45px;
+      position: relative;
+
+}
+
+ul li{
+
+        text-align: left;
+    list-style: none;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(/images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top:12px;
+    left: 8px;
+
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through ;
+}
+
+li button {
+  text-decoration: none;}
+
+ul li.checked::before{
+   background-image: url(/images/checked.png);
+}
+
+.checked {
+  text-decoration: line-through;
+  position: relative;
+}
+
+.checked span {
+  text-decoration: none;
+  position: absolute;
+  right: 0;
+}
+
+
+
+@media (max-width: 400px) {
+  input {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .activity {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
